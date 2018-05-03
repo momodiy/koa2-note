@@ -55,7 +55,7 @@ app.use(convert(static(
  * 使用第三方中间件 end 
  */
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
   if ( ctx.method === 'GET' ) {
     let title = 'upload pic async'
     await ctx.render('index', {

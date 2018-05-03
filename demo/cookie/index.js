@@ -1,7 +1,7 @@
 const Koa = require('koa')
 const app = new Koa()
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
 
   if ( ctx.url === '/index' ) {
     // 设置cookie

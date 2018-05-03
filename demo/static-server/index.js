@@ -15,7 +15,7 @@ function parseMime( url ) {
   return  mimes[ extName ]
 }
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
   // 静态资源目录在本地的绝对路径
   let fullStaticPath = path.join(__dirname, staticPath)
 

@@ -12,7 +12,7 @@ app.use(static(
 ))
 
 
-// app.use( async ( ctx ) => {
+// app.use(async ctx=> {
 //   ctx.body = 'hello world'
 // })
 

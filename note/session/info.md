@@ -57,7 +57,7 @@ app.use(session({
   cookie: cookie
 }))
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
 
   // 设置session
   if ( ctx.url === '/set' ) {

@@ -5,7 +5,7 @@ const bodyParser = require('koa-bodyparser')
 // 使用ctx.body解析中间件
 app.use(bodyParser())
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
 
   if ( ctx.url === '/' && ctx.method === 'GET' ) {
     // 当GET请求时候返回表单页面

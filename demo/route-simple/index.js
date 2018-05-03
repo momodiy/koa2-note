@@ -48,7 +48,7 @@ async function route( url ) {
   return html
 }
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
   let url = ctx.request.url
   let html = await route( url )
   ctx.body = html

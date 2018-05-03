@@ -25,7 +25,7 @@ app.use(static(
  */
 
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
   if ( ctx.method === 'GET' ) {
     let title = 'upload pic async'
     await ctx.render('index', {

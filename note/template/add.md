@@ -38,7 +38,7 @@ app.use(views(path.join(__dirname, './view'), {
   extension: 'ejs'
 }))
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
   let title = 'hello koa2'
   await ctx.render('index', {
     title,

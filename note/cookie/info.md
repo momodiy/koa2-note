@@ -14,7 +14,7 @@ koa2 中操作的cookies是使用了npm的cookies模块，源码在[https://gith
 const Koa = require('koa')
 const app = new Koa()
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
 
   if ( ctx.url === '/index' ) {
     ctx.cookies.set(

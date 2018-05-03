@@ -27,7 +27,7 @@ const app = new Koa()
 // 使用中间件
 app.use(jsonp())
 
-app.use( async ( ctx ) => {
+app.use(async ctx=> {
   
   let returnData = {
     success: true,
