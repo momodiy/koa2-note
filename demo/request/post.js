@@ -20,7 +20,8 @@ app.use(async ctx=> {
     ctx.body = html
   } else if ( ctx.url === '/' && ctx.method === 'POST' ) {
     // 当POST请求的时候，解析POST表单里的数据，并显示出来
-    let postData = await parsePostData( ctx )
+    // let postData = await parsePostData( ctx )
+    let postData =ctx
     ctx.body = postData
   } else {
     // 其他请求显示404
@@ -33,9 +34,11 @@ function parsePostData( ctx ) {
   return new Promise((resolve, reject) => {
     try {
       let postdata = "";
+      //传输数据的监听
       ctx.req.addListener('data', (data) => {
         postdata += data
       })
+        //传输结束的监听
       ctx.req.addListener("end",function(){
         let parseData = parseQueryStr( postdata )
         resolve( parseData )

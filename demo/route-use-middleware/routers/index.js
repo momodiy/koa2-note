@@ -4,8 +4,9 @@ const home = require('./home')
 const api = require('./api')
 const page = require('./page')
 
+
 router.use('/', home.routes(), home.allowedMethods())
 router.use('/api', api.routes(), api.allowedMethods())
-router.use('/page', page.routes(), page.allowedMethods())
+router.use('/page', page.routes())
 
 module.exports = router
