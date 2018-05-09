@@ -1,3 +1,4 @@
+// 配置不同类型文件的不同读取方式
 let mimes = {
   'css': 'text/css',
   'less': 'text/css',
