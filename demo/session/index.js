@@ -4,15 +4,16 @@ const MysqlSession = require('koa-mysql-session')
 
 const app = new Koa()
 
+//  TODO 需要首先配置好本地mysql
 // 配置存储session信息的mysql
 let store = new MysqlSession({
   user: 'root',
-  password: 'abc123',
+  password: 'admin',
   database: 'koa_demo',
   host: '127.0.0.1',
 })
 
-// 存放sessionId的cookie配置
+// 存放sessionId的cookie配置s
 let cookie = {
   maxAge: '', // cookie有效时长
   expires: '',  // cookie失效时间

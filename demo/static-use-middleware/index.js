@@ -12,13 +12,21 @@ const staticPath = './static'
 * static 静态缓存 （dir,option,files）
 * 详细配置信息： https://github.com/koajs/static-cache#staticcachedir--options--files
 * */
+
+//path.join(__dirname, staticPath) 待访问的静态资源路径
+// .../koa2-note/demo/static-use-middleware/static
+
 app.use(static(
     path.join(__dirname, staticPath)
 ))
 
-// app.use(async ctx=> {
-//   ctx.body = 'hello world'
-// })
+app.use(async ctx => {
+    ctx.body = 'hello world'
+})
+
+app.use(async ctx => {
+    console.log(343434);
+})
 
 app.listen(3000, () => {
     console.log('[demo] static-use-middleware is starting at port 3000')
