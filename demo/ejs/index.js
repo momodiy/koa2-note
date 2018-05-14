@@ -3,9 +3,14 @@ const views = require('koa-views')
 const path = require('path')
 const app = new Koa()
 
-//koa-views 不支持自定义扩展名，这里必须为 ejs
+/*koa-views
+* @param 加载的资源路径（不包含扩展名）
+*
+*/
+
+console.log(path.join(__dirname, './view'));
 app.use(views(path.join(__dirname, './view'), {
-    extension: 'ejs' //
+    extension: 'jade'
 }))
 
 app.use(async ctx => {

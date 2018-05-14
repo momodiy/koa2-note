@@ -8,9 +8,11 @@ const app = new Koa()
 // 配置存储session信息的mysql
 let store = new MysqlSession({
     user: 'root',
-    password: 'admin',
-    database: 'koa_demo',
+    password: '12345678',
+    database: 'test',
     host: '127.0.0.1',
+    port: 3306,
+    insecureAuth: true
 })
 
 // 存放sessionId的cookie配置s
